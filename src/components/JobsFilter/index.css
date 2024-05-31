@@ -1,0 +1,28 @@
+.title-for-filters {
+  font-size: 18px;
+  color: #f8fafc;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.hr-container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.employment-types-container {
+  padding-left: 0px;
+  list-style-type: none;
+  margin-top: 5px;
+  width: 80%;
+}
+
+.each-item {
+  margin-top: 8px;
+}
+
+.checkbox-label {
+  font-size: 15px;
+  color: #f1f5f9;
+  margin-left: 7px;
+}
