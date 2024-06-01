@@ -67,7 +67,11 @@ class ProfileCard extends Component {
 
   renderRetryButton = () => (
     <div className="profileloading-contianer">
-      <button className="retry-button" onClick={this.clickOnRetry}>
+      <button
+        type="button"
+        className="retry-button"
+        onClick={this.clickOnRetry}
+      >
         Retry
       </button>
     </div>

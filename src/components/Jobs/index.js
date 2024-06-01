@@ -160,7 +160,11 @@ class Jobs extends Component {
       />
       <h1 className="no-jobs-title">Oops! Something Went Wrong</h1>
       <p>We cannot to seem to find the page you are looking.</p>
-      <button className="retry-button" onClick={this.onClickRetry}>
+      <button
+        type="button"
+        className="retry-button"
+        onClick={this.onClickRetry}
+      >
         Retry
       </button>
     </div>
@@ -170,6 +174,7 @@ class Jobs extends Component {
     const {searchInput} = this.state
     return (
       <div className="search-card">
+        <label htmlFor="inputSearch">Search</label>
         <input
           type="search"
           className="input-search"
@@ -178,10 +183,13 @@ class Jobs extends Component {
           onChange={this.onChangeSearchInput}
           id="inputSearch"
         />
+
+        {/* Providing aria-label for button accessibility */}
         <button
           type="button"
           onClick={this.onClickSearchBtn}
           data-testid="searchButton"
+          aria-label="Search"
         >
           <BsSearch />
         </button>
@@ -215,18 +223,16 @@ class Jobs extends Component {
     </div>
   )
 
-  renderJobsFilter = () => {
-    return (
-      <div className="jobs-filter-container">
-        <JobsFilter
-          employmentTypesList={employmentTypesList}
-          salaryRangesList={salaryRangesList}
-          onChangeEmployment={this.onChangeEmployment}
-          onChangeSalary={this.onChangeSalary}
-        />
-      </div>
-    )
-  }
+  renderJobsFilter = () => (
+    <div className="jobs-filter-container">
+      <JobsFilter
+        employmentTypesList={employmentTypesList}
+        salaryRangesList={salaryRangesList}
+        onChangeEmployment={this.onChangeEmployment}
+        onChangeSalary={this.onChangeSalary}
+      />
+    </div>
+  )
 
   rendercards = () => (
     <div>
@@ -236,12 +242,12 @@ class Jobs extends Component {
           <ProfileCard />
           {this.renderJobsFilter()}
         </div>
-        <div className="jobs-container-main">
+        <ul className="jobs-container-main">
           <>
             {this.renderSearchCard()}
             {this.checkTheApiStatus()}
           </>
-        </div>
+        </ul>
       </div>
     </div>
   )

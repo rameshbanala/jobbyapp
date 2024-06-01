@@ -12,9 +12,16 @@
   width: 30%;
   padding: 15px;
 }
+.label-search{
+  display: none;
+}
 
 .jobs-container-main {
   width: 70%;
+  padding-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style-type: none;
 }
 .jobs-container {
   display: flex;

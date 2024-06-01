@@ -125,6 +125,7 @@ class JobDetails extends Component {
               className="external-link"
               href={jobDetails.companyWebsiteUrl}
               target="_blank"
+              rel="noopener noreferrer"
             >
               Visit <FaExternalLinkAlt />
             </a>
@@ -162,7 +163,11 @@ class JobDetails extends Component {
       />
       <h1 className="no-jobs-title">Oops! Something Went Wrong</h1>
       <p>We cannot seem to find the page you are looking for</p>
-      <button className="retry-button" onClick={this.onClickRetry}>
+      <button
+        type="button"
+        className="retry-button"
+        onClick={this.onClickRetry}
+      >
         Retry
       </button>
     </div>

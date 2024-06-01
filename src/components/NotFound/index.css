@@ -1,4 +1,4 @@
-.not-found-bg-container {
+.main-not-found-bg-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,16 +8,16 @@
   font-family: Roboto;
 }
 
-.not-found-img {
+.main-not-found-img {
   width: 30%;
 }
 
-.not-found-bg-container h1 {
+.main-not-found-bg-container h1 {
   font-size: 32px;
   color: #ffffff;
   margin-bottom: 10px;
 }
-.not-found-bg-container p {
+.main-not-found-bg-container p {
   font-size: 18px;
   color: #f8fafc;
   margin-top: 4px;
